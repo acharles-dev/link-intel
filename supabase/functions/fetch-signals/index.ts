@@ -7,17 +7,13 @@ const FEEDS: Record<string, { blog?: string; changelog?: string }> = {
     blog: "https://blog.bitly.com/rss",
   },
   dub: {
-    blog: "https://dub.co/blog",
-    changelog: "https://dub.co/changelog",
+    changelog: "https://dub.co/changelog/feed",
   },
   shortio: {
     blog: "https://blog.short.io/rss",
   },
   rebrandly: {
-    blog: "https://www.rebrandly.com/blog/rss",
-  },
-  sniply: {
-    blog: "https://blog.sniply.io/rss",
+    blog: "https://www.rebrandly.com/blog/feed",
   },
 };
 
