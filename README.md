@@ -2,7 +2,7 @@
 
 Competitive intelligence dashboard for the link management space. Tracks blog posts, changelog updates, pricing changes, and feature announcements across Bitly, Dub, Short.io, Bl.ink, TinyURL, Rebrandly, Sniply, and Cuttly.
 
-**Live:** [link TBD]
+**Live:** [link-intel.vercel.app](https://link-intel.vercel.app)
 
 ## Supabase Features Used
 
