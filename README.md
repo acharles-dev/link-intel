@@ -1,19 +1,18 @@
 # link-intel
 
-Competitive intelligence dashboard for the link management space. Tracks blog posts, changelog updates, pricing changes, and feature announcements across Bitly, Dub, Short.io, Bl.ink, TinyURL, Rebrandly, Sniply, and Cuttly.
+Competitive intelligence dashboard for the link management space. Tracks blog posts and changelog updates across Bitly, Dub, Short.io, Bl.ink, TinyURL, Rebrandly, Sniply, and Cuttly.
 
 **Live:** [link-intel.vercel.app](https://link-intel.vercel.app)
 
 ## Supabase Features Used
 
-- **Database (Postgres)** with proper schema design for competitors, signals, and pricing snapshots
-- **Edge Functions** as a scheduled cron worker that fetches RSS feeds and scrapes pricing pages
-- **Row Level Security** for safe public read access with the anon key
-- **pg_cron** for scheduled data collection
+- **Database (Postgres)** for competitors and signals with deduplication
+- **Edge Functions** — Deno worker that fetches RSS feeds and stores new entries
+- **Row Level Security** — public read via anon key, writes restricted to service_role
 
 ## Background
 
-I built competitive intelligence tools in Flask and Python while leading product marketing at Rebrandly. This project rebuilds that tooling on Supabase because Edge Functions + Postgres is a cleaner stack for scheduled data collection than Flask + cron + SQLite.
+I built competitive intelligence tools in Flask and Python while leading product marketing at Rebrandly. This project rebuilds that concept on Supabase because Edge Functions + Postgres is a cleaner stack for scheduled data collection.
 
 ## Setup
 
@@ -21,7 +20,7 @@ I built competitive intelligence tools in Flask and Python while leading product
 2. Run `supabase/migrations/001_initial_schema.sql` in the SQL editor
 3. Run `supabase/seed.sql` to add competitor records
 4. Deploy the Edge Function: `supabase functions deploy fetch-signals`
-5. Set up pg_cron to invoke the function daily
+5. Invoke the function manually from the Dashboard to populate initial data
 6. Copy project URL + anon key into `index.html`
 7. Deploy frontend to Vercel: `vercel --prod`
 
