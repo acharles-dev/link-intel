@@ -5,6 +5,71 @@ let db, signals = [], competitors = [], jobs = [];
 let currentView = 'digest';
 let selectedComp = null;
 
+// Static competitive intelligence (updated manually or via scraping)
+const INTEL = {
+  bitly: {
+    tagline: 'Connections Platform',
+    positioning: 'Enterprise link management with QR codes, landing pages, and analytics. Targeting large orgs and agencies.',
+    pricing: [
+      {name:'Free',price:'$0',links:'10/mo'},
+      {name:'Core',price:'$10/mo',links:'100/mo'},
+      {name:'Growth',price:'$29/mo',links:'500/mo'},
+      {name:'Premium',price:'$199/mo',links:'3K/mo'},
+      {name:'Enterprise',price:'Custom',links:'Unlimited'},
+    ],
+  },
+  dub: {
+    tagline: 'Links that mean more',
+    positioning: 'Open-source link management with conversion tracking and affiliate programs. Developer-first PLG motion.',
+    pricing: [
+      {name:'Free',price:'$0',links:'25/mo'},
+      {name:'Pro',price:'$25/mo',links:'1K/mo'},
+      {name:'Business',price:'$75/mo',links:'5K/mo'},
+      {name:'Enterprise',price:'Custom',links:'Unlimited'},
+    ],
+  },
+  shortio: {
+    tagline: 'Short links, big results',
+    positioning: 'Developer-friendly URL shortener with strong API, white-label options, and bot detection.',
+    pricing: [
+      {name:'Free',price:'$0',links:'1K/mo'},
+      {name:'Hobby',price:'$19/mo',links:'10K/mo'},
+      {name:'Pro',price:'$29/mo',links:'50K/mo'},
+      {name:'Team',price:'$48/mo',links:'200K/mo'},
+      {name:'Enterprise',price:'Custom',links:'Unlimited'},
+    ],
+  },
+  tinyurl: {
+    tagline: 'Shorten your links',
+    positioning: 'Simple mass-market URL shortener. Consumer-friendly, limited analytics and enterprise features.',
+    pricing: [
+      {name:'Free',price:'$0',links:'5/mo'},
+      {name:'Pro',price:'$13/mo',links:'1K/mo'},
+      {name:'Bulk',price:'$99/mo',links:'100K/mo'},
+    ],
+  },
+  rebrandly: {
+    tagline: 'The link management platform',
+    positioning: 'Brand-first link management with conversion tracking, custom domains, and team collaboration.',
+    pricing: [
+      {name:'Free',price:'$0',links:'10/mo'},
+      {name:'Essentials',price:'$14/mo',links:'250/mo'},
+      {name:'Professional',price:'$69/mo',links:'1.5K/mo'},
+      {name:'Enterprise',price:'Custom',links:'Unlimited'},
+    ],
+  },
+  sniply: {
+    tagline: 'Add a CTA to every link',
+    positioning: 'Content curation with CTA overlays on shared third-party links. No free tier.',
+    pricing: [
+      {name:'Basic',price:'$9/mo',links:'500/mo'},
+      {name:'Pro',price:'$29/mo',links:'2K/mo'},
+      {name:'Business',price:'$59/mo',links:'5K/mo'},
+      {name:'Agency',price:'$149/mo',links:'20K/mo'},
+    ],
+  },
+};
+
 async function init() {
   if (!SUPABASE_URL || !SUPABASE_KEY) return;
   const { createClient } = supabase;
@@ -105,8 +170,8 @@ function renderPricing() {
   // Get all tier names across all competitors
   const allTiers = new Set();
   competitors.forEach(c => {
-    const pd = c.pricing_data;
-    if (pd?.tiers) pd.tiers.forEach(t => allTiers.add(t.name));
+    const pd = INTEL[c.slug];
+    if (pd?.pricing) pd.pricing.forEach(t => allTiers.add(t.name));
   });
   const tierOrder = ['Free', 'Basic', 'Essentials', 'Starter', 'Core', 'Hobby', 'Pro', 'Professional', 'Growth', 'Business', 'Team', 'Premium', 'Bulk', 'Agency', 'Enterprise'];
   const tiers = tierOrder.filter(t => allTiers.has(t));
@@ -118,10 +183,10 @@ function renderPricing() {
   html += `</tr></thead><tbody>`;
 
   competitors.forEach(c => {
-    const pd = c.pricing_data;
-    if (!pd?.tiers) return;
+    const pd = INTEL[c.slug];
+    if (!pd?.pricing) return;
     const tierMap = {};
-    pd.tiers.forEach(t => { tierMap[t.name] = t; });
+    pd.pricing.forEach(t => { tierMap[t.name] = t; });
 
     html += `<tr style="border-bottom:1px solid var(--border)">`;
     html += `<td style="padding:10px 12px;font-weight:600">${esc(c.logo_emoji||'')} ${esc(c.name)}</td>`;
@@ -140,11 +205,12 @@ function renderPricing() {
   // Positioning comparison
   html += `<div class="section-header" style="margin-top:24px">Positioning & Messaging</div>`;
   competitors.forEach(c => {
-    if (!c.tagline && !c.positioning) return;
+    const ci = INTEL[c.slug];
+    if (!ci) return;
     html += `<div class="signal-card" style="margin-bottom:8px">
       <div style="font-weight:600;font-size:0.85rem">${esc(c.logo_emoji||'')} ${esc(c.name)}</div>
-      ${c.tagline ? `<div style="font-size:0.8rem;color:var(--accent);margin-top:4px">"${esc(c.tagline)}"</div>` : ''}
-      ${c.positioning ? `<div style="font-size:0.75rem;color:var(--dim);margin-top:4px">${esc(c.positioning)}</div>` : ''}
+      ${ci.tagline ? `<div style="font-size:0.8rem;color:var(--accent);margin-top:4px">"${esc(ci.tagline)}"</div>` : ''}
+      ${ci.positioning ? `<div style="font-size:0.75rem;color:var(--dim);margin-top:4px">${esc(ci.positioning)}</div>` : ''}
     </div>`;
   });
 
@@ -185,6 +251,7 @@ function renderCompProfile(slug) {
   const comp = competitors.find(c => c.slug === slug);
   if (!comp) return;
   const main = document.getElementById('main');
+  const ci = INTEL[slug];
   const sigs = signals.filter(s => s.competitors?.slug === slug);
   const cJobs = jobs.filter(j => j.competitors?.slug === slug);
 
@@ -194,10 +261,10 @@ function renderCompProfile(slug) {
       <div class="comp-info">
         <h2>${esc(comp.name)}</h2>
         <p><a href="${esc(comp.website)}" target="_blank" style="color:var(--accent)">${esc(comp.website)}</a></p>
-        ${comp.tagline ? `<p style="margin-top:4px;color:var(--accent);font-size:0.82rem">"${esc(comp.tagline)}"</p>` : ''}
+        ${ci?.tagline ? `<p style="margin-top:4px;color:var(--accent);font-size:0.82rem">"${esc(ci.tagline)}"</p>` : ''}
       </div>
     </div>
-    ${comp.positioning ? `<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:12px 16px;margin-bottom:16px;font-size:0.8rem;color:var(--dim)">${esc(comp.positioning)}</div>` : ''}
+    ${ci?.positioning ? `<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:12px 16px;margin-bottom:16px;font-size:0.8rem;color:var(--dim)">${esc(ci.positioning)}</div>` : ''}
     <div class="stats-row">
       <div class="stat-card"><div class="val">${sigs.length}</div><div class="lbl">Total Signals</div></div>
       <div class="stat-card"><div class="val">${cJobs.length}</div><div class="lbl">Open Roles</div></div>
@@ -205,10 +272,9 @@ function renderCompProfile(slug) {
     </div>`;
 
   // Pricing tiers
-  const pd = comp.pricing_data;
-  if (pd?.tiers) {
+  if (ci?.pricing) {
     html += `<div class="section-header">Pricing</div><div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px">`;
-    pd.tiers.forEach(t => {
+    ci.pricing.forEach(t => {
       html += `<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:10px 14px;min-width:100px;text-align:center">
         <div style="font-size:0.65rem;color:var(--dim)">${esc(t.name)}</div>
         <div style="font-size:1rem;font-weight:700">${esc(t.price)}</div>
