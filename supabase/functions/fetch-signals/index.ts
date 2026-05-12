@@ -10,6 +10,7 @@ const RSS_FEEDS: Record<string, string> = {
 
 const SITEMAP_SOURCES: Record<string, { sitemap: string; pathPrefix: string }> = {
   dub: { sitemap: "https://dub.co/sitemap.xml", pathPrefix: "/blog/" },
+  bitly: { sitemap: "https://bitly.com/blog-hub/post-sitemap.xml", pathPrefix: "/blog/" },
 };
 
 const WEBFLOW_SOURCES: Record<string, { url: string; hrefPattern: RegExp }> = {
