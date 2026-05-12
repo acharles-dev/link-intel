@@ -2,7 +2,7 @@ const SUPABASE_URL = window.__SUPABASE_URL__ || '';
 const SUPABASE_KEY = window.__SUPABASE_KEY__ || '';
 
 let db, allSignals = [], competitors = [];
-let filterCompetitor = null, filterType = null;
+let activeComp = null;
 
 async function init() {
   if (!SUPABASE_URL || !SUPABASE_KEY) return;
@@ -21,90 +21,124 @@ async function init() {
 }
 
 function render() {
-  renderStats();
-  renderControls();
-  renderFeed();
+  let signals = allSignals;
+  if (activeComp) signals = signals.filter(s => s.competitors?.slug === activeComp);
+
+  renderStats(signals);
+  renderChips();
+  renderSummary(signals);
+  renderTimeline(signals);
 }
 
-function renderStats() {
-  const el = document.getElementById('stats');
-  const types = {};
-  allSignals.forEach(s => types[s.signal_type] = (types[s.signal_type] || 0) + 1);
-  el.innerHTML = `
-    <span><strong>${allSignals.length}</strong> signals</span>
+function renderStats(signals) {
+  const now = Date.now();
+  const day = 86400000;
+  const recent = signals.filter(s => now - new Date(s.detected_at).getTime() < day).length;
+  const week = signals.filter(s => now - new Date(s.detected_at).getTime() < 7 * day).length;
+
+  document.getElementById('stats').innerHTML = `
+    <span><strong>${signals.length}</strong> total signals</span>
     <span><strong>${competitors.length}</strong> competitors</span>
-    <span><strong>${types.blog || 0}</strong> blog</span>
-    <span><strong>${types.changelog || 0}</strong> changelog</span>
+    <span><strong>${recent}</strong> last 24h</span>
+    <span><strong>${week}</strong> last 7 days</span>
   `;
 }
 
-function renderControls() {
-  const el = document.getElementById('controls');
+function renderChips() {
+  const el = document.getElementById('chips');
   const counts = {};
   allSignals.forEach(s => {
-    const n = s.competitors?.slug || '';
-    counts[n] = (counts[n] || 0) + 1;
+    const slug = s.competitors?.slug || '';
+    counts[slug] = (counts[slug] || 0) + 1;
   });
 
-  let html = `<button class="chip ${!filterCompetitor ? 'active' : ''}" data-filter="comp" data-val="">All</button>`;
+  let html = '';
+  html += chip('All', '', !activeComp, allSignals.length);
   competitors.forEach(c => {
-    html += `<button class="chip ${filterCompetitor === c.slug ? 'active' : ''}" data-filter="comp" data-val="${esc(c.slug)}">${esc(c.logo_emoji || '')} ${esc(c.name)}<span class="num">${counts[c.slug] || 0}</span></button>`;
+    html += chip(`${c.logo_emoji || ''} ${c.name}`, c.slug, activeComp === c.slug, counts[c.slug] || 0);
   });
-
-  html += `<div class="separator"></div>`;
-  ['blog', 'changelog', 'pricing', 'feature'].forEach(t => {
-    html += `<button class="chip ${filterType === t ? 'active' : ''}" data-filter="type" data-val="${t}">${t}</button>`;
-  });
-
   el.innerHTML = html;
-  el.querySelectorAll('.chip').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const f = btn.dataset.filter;
-      const v = btn.dataset.val;
-      if (f === 'comp') filterCompetitor = v || null;
-      if (f === 'type') filterType = filterType === v ? null : v;
-      render();
-    });
-  });
 }
 
-function renderFeed() {
-  const el = document.getElementById('feed');
-  let filtered = allSignals;
-  if (filterCompetitor) filtered = filtered.filter(s => s.competitors?.slug === filterCompetitor);
-  if (filterType) filtered = filtered.filter(s => s.signal_type === filterType);
+function chip(label, val, active, count) {
+  return `<button class="chip ${active ? 'active' : ''}" onclick="setFilter('${esc(val)}')">${label}<span class="num">${count}</span></button>`;
+}
 
-  if (!filtered.length) {
-    el.innerHTML = '<div class="empty">No signals match this filter.</div>';
+window.setFilter = function(slug) {
+  activeComp = slug || null;
+  render();
+};
+
+function renderSummary(signals) {
+  const el = document.getElementById('summary');
+  if (!signals.length) { el.innerHTML = ''; return; }
+
+  const now = Date.now();
+  const week = 7 * 86400000;
+  const recent = signals.filter(s => now - new Date(s.detected_at).getTime() < week);
+
+  // Group recent by competitor
+  const byComp = {};
+  recent.forEach(s => {
+    const name = s.competitors?.name || 'Unknown';
+    if (!byComp[name]) byComp[name] = [];
+    byComp[name].push(s);
+  });
+
+  if (!recent.length) {
+    el.innerHTML = '<div class="summary-box"><p class="summary-text">No new signals this week.</p></div>';
     return;
   }
 
-  el.innerHTML = filtered.map(s => {
-    const comp = s.competitors || {};
-    return `
-      <div class="signal">
-        <div class="signal-icon">${esc(comp.logo_emoji || '')}</div>
-        <div class="signal-body">
-          <div class="signal-row">
-            <span class="signal-company">${esc(comp.name || '')}</span>
-            <span class="badge badge-${esc(s.signal_type)}">${esc(s.signal_type)}</span>
-          </div>
-          <a class="signal-title" href="${esc(s.source_url)}" target="_blank" rel="noopener">${esc(s.title)}</a>
-          ${s.summary ? `<div class="signal-summary">${esc(s.summary)}</div>` : ''}
-        </div>
-        <span class="signal-time">${timeAgo(new Date(s.detected_at))}</span>
-      </div>`;
-  }).join('');
+  let html = '<div class="summary-box"><h3>This Week</h3>';
+  for (const [name, sigs] of Object.entries(byComp)) {
+    html += `<div class="summary-line"><strong>${esc(name)}</strong>: ${sigs.length} new — `;
+    html += sigs.slice(0, 2).map(s => `<a href="${esc(s.source_url)}" target="_blank" rel="noopener">${esc(truncate(s.title, 50))}</a>`).join(', ');
+    if (sigs.length > 2) html += ` +${sigs.length - 2} more`;
+    html += '</div>';
+  }
+  html += '</div>';
+  el.innerHTML = html;
 }
 
-function timeAgo(d) {
-  const s = Math.floor((Date.now() - d.getTime()) / 1000);
-  if (s < 60) return 'now';
-  if (s < 3600) return Math.floor(s / 60) + 'm';
-  if (s < 86400) return Math.floor(s / 3600) + 'h';
-  if (s < 604800) return Math.floor(s / 86400) + 'd';
-  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+function renderTimeline(signals) {
+  const el = document.getElementById('timeline');
+  if (!signals.length) {
+    el.innerHTML = '<div class="empty">No signals yet.</div>';
+    return;
+  }
+
+  // Group by date
+  const groups = {};
+  signals.forEach(s => {
+    const d = new Date(s.detected_at);
+    const key = d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(s);
+  });
+
+  let html = '';
+  for (const [date, sigs] of Object.entries(groups)) {
+    html += `<div class="date-group">`;
+    html += `<div class="date-label">${date} <span class="date-count">${sigs.length}</span></div>`;
+    sigs.forEach(s => {
+      const comp = s.competitors || {};
+      html += `
+        <div class="signal">
+          <span class="signal-icon">${esc(comp.logo_emoji || '')}</span>
+          <div class="signal-body">
+            <span class="signal-company">${esc(comp.name || '')}</span>
+            <a class="signal-title" href="${esc(s.source_url)}" target="_blank" rel="noopener">${esc(s.title)}</a>
+            ${s.summary ? `<p class="signal-summary">${esc(truncate(s.summary, 150))}</p>` : ''}
+          </div>
+        </div>`;
+    });
+    html += '</div>';
+  }
+  el.innerHTML = html;
 }
+
+function truncate(s, n) { return s && s.length > n ? s.slice(0, n) + '...' : s; }
 
 function esc(s) {
   if (!s) return '';
