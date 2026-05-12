@@ -7,23 +7,28 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="layout">
-    <header>
-      <h1>link-intel</h1>
-      <p>Competitive intelligence for the link management space</p>
-    </header>
-    <div class="stats" id="stats"></div>
-    <div id="chips"></div>
-    <div id="summary"></div>
-    <div id="timeline">
-      <div class="empty">Loading...</div>
-    </div>
+  <div class="app">
+    <nav class="sidebar">
+      <div class="logo">link-intel</div>
+      <div class="nav-section">
+        <button class="nav-btn active" onclick="switchView('digest')">Daily Digest</button>
+        <button class="nav-btn" onclick="switchView('pricing')">Pricing Matrix</button>
+        <button class="nav-btn" onclick="switchView('competitors')">Competitors</button>
+        <button class="nav-btn" onclick="switchView('hiring')">Hiring Radar</button>
+        <button class="nav-btn" onclick="switchView('timeline')">All Signals</button>
+      </div>
+      <div class="nav-section">
+        <div class="nav-label">Competitors</div>
+        <div id="comp-nav"></div>
+      </div>
+      <div class="sidebar-footer">
+        Built with <a href="https://supabase.com" target="_blank">Supabase</a>
+      </div>
+    </nav>
+    <main class="main" id="main">
+      <div class="loading">Loading intelligence...</div>
+    </main>
   </div>
-  <footer>
-    <div class="layout">
-      Built with <a href="https://supabase.com" target="_blank">Supabase</a>
-    </div>
-  </footer>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
     window.__SUPABASE_URL__ = 'https://afsrseiljizdmytfgxcg.supabase.co';
