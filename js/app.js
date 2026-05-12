@@ -123,42 +123,49 @@ function renderDigest() {
 
   const today = signals.filter(s => now - new Date(s.detected_at).getTime() < day);
   const week = signals.filter(s => now - new Date(s.detected_at).getTime() < 7*day);
-  const highSeverity = week.filter(s => (s.severity || 2) >= 4);
+  const month = signals.filter(s => now - new Date(s.detected_at).getTime() < 30*day);
+  const highAll = signals.filter(s => (s.severity || 2) >= 4).sort((a,b) => (b.severity||2) - (a.severity||2));
+  const recentHigh = month.filter(s => (s.severity || 2) >= 4);
 
   let html = `
     <div class="view-header"><h1>Daily Digest</h1><p>Competitive intelligence summary</p></div>
     <div class="stats-row">
-      <div class="stat-card highlight"><div class="val">${highSeverity.length}</div><div class="lbl">High Priority</div></div>
+      <div class="stat-card highlight"><div class="val">${highAll.length}</div><div class="lbl">High Priority</div></div>
       <div class="stat-card"><div class="val">${today.length}</div><div class="lbl">Today</div></div>
       <div class="stat-card"><div class="val">${week.length}</div><div class="lbl">This Week</div></div>
       <div class="stat-card"><div class="val">${jobs.length}</div><div class="lbl">Open Roles</div></div>
     </div>`;
 
-  if (highSeverity.length) {
-    html += `<div class="section-header">High Priority Signals</div>`;
-    html += highSeverity.map(signalCard).join('');
+  // Always show high-priority signals
+  if (highAll.length) {
+    html += `<div class="section-header">Key Intelligence</div>`;
+    html += highAll.map(signalCard).join('');
   }
 
-  // Group today's signals by competitor
+  // Recent activity by competitor
+  const recentSignals = week.length ? week : month;
+  const timeLabel = week.length ? 'This Week' : 'This Month';
   const byComp = {};
-  week.forEach(s => {
+  recentSignals.forEach(s => {
     const name = s.competitors?.name || 'Unknown';
     if (!byComp[name]) byComp[name] = [];
     byComp[name].push(s);
   });
 
   if (Object.keys(byComp).length) {
-    html += `<div class="section-header">This Week by Competitor</div>`;
-    for (const [name, sigs] of Object.entries(byComp)) {
+    html += `<div class="section-header">${timeLabel} by Competitor</div>`;
+    // Sort by signal count descending
+    const sorted = Object.entries(byComp).sort((a,b) => b[1].length - a[1].length);
+    for (const [name, sigs] of sorted) {
       html += `<div style="margin-bottom:16px">`;
       html += `<div style="font-weight:600;font-size:0.82rem;padding:8px 0 4px">${esc(name)} <span style="color:var(--dim);font-weight:400">${sigs.length} signals</span></div>`;
-      html += sigs.slice(0, 5).map(signalCard).join('');
-      if (sigs.length > 5) html += `<div style="color:var(--dim);font-size:0.75rem;padding:4px 16px">+${sigs.length-5} more</div>`;
+      html += sigs.slice(0, 3).map(signalCard).join('');
+      if (sigs.length > 3) html += `<div style="color:var(--dim);font-size:0.75rem;padding:4px 16px">+${sigs.length-3} more</div>`;
       html += `</div>`;
     }
   }
 
-  if (!week.length) html += `<div class="empty">No signals this week. Run the collectors to populate data.</div>`;
+  if (!signals.length) html += `<div class="empty">No signals yet. Run the collectors to populate data.</div>`;
   main.innerHTML = html;
 }
 
