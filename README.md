@@ -1,31 +1,39 @@
-# link-intel
+# Link Intel
 
-Competitive intelligence dashboard for the link management space. Tracks blog posts and changelog updates across Bitly, Dub, Short.io, Bl.ink, TinyURL, Rebrandly, Sniply, and Cuttly.
+Competitive intelligence dashboard for the link-management space. Tracks blog posts and job postings from 6 competitors, updated daily.
 
-**Live:** [link-intel.vercel.app](https://link-intel.vercel.app)
+**Live site:** [acharles-dev.github.io/link-intel/](https://acharles-dev.github.io/link-intel/)
 
-## Supabase Features Used
+## How it works
 
-- **Database (Postgres)** for competitors and signals with deduplication
-- **Edge Functions** — Deno worker that fetches RSS feeds and stores new entries
-- **Row Level Security** — public read via anon key, writes restricted to service_role
+1. A Python script (`scripts/collect.py`) fetches blog posts from RSS feeds, sitemaps, and HTML scraping, plus job postings from Greenhouse APIs.
+2. A GitHub Actions workflow runs the script daily at 2pm UTC, then commits the results to `data/`.
+3. A static HTML/CSS/JS dashboard reads the JSON data files and renders them. Hosted on GitHub Pages.
 
-## Background
+No external services, databases, or API keys required. Everything runs on GitHub's free tier.
 
-I built competitive intelligence tools in Flask and Python while leading product marketing at Rebrandly. This project rebuilds that concept on Supabase because Edge Functions + Postgres is a cleaner stack for scheduled data collection.
+## Competitors tracked
 
-## Setup
+| Competitor | Blog source | Jobs source |
+|---|---|---|
+| Bitly | Sitemap | Greenhouse API |
+| Dub | Sitemap | -- |
+| Short.io | RSS | -- |
+| TinyURL | RSS | -- |
+| Rebrandly | HTML scrape | -- |
+| Sniply | RSS | -- |
 
-1. Create a Supabase project at [supabase.com](https://supabase.com)
-2. Run `supabase/migrations/001_initial_schema.sql` in the SQL editor
-3. Run `supabase/seed.sql` to add competitor records
-4. Deploy the Edge Function: `supabase functions deploy fetch-signals`
-5. Invoke the function manually from the Dashboard to populate initial data
-6. Copy project URL + anon key into `index.html`
-7. Deploy frontend to Vercel: `vercel --prod`
+## Run manually
 
-## Stack
+Go to the **Actions** tab in this repo, select "Collect Competitive Intel", and click "Run workflow". Results will be committed to the `data/` directory within a few minutes.
 
-- Vanilla HTML/CSS/JS (dark theme, monospace, no build step)
-- Supabase JS client via CDN
-- Deno Edge Function for RSS parsing and data collection
+## Local development
+
+```bash
+# Collect data locally
+python scripts/collect.py
+
+# Serve the dashboard
+python -m http.server 8000
+# Open http://localhost:8000
+```
