@@ -1,1 +1,33 @@
-{"last_updated": null, "sources": {}}
+{
+  "last_updated": "2026-05-14T20:24:53Z",
+  "sources": {
+    "shortio_rss": {
+      "status": "ok",
+      "items": 15
+    },
+    "tinyurl_rss": {
+      "status": "ok",
+      "items": 10
+    },
+    "sniply_rss": {
+      "status": "ok",
+      "items": 10
+    },
+    "dub_sitemap": {
+      "status": "ok",
+      "items": 54
+    },
+    "bitly_sitemap": {
+      "status": "ok",
+      "items": 766
+    },
+    "rebrandly_html": {
+      "status": "ok",
+      "items": 105
+    },
+    "bitly_jobs": {
+      "status": "ok",
+      "items": 1
+    }
+  }
+}
