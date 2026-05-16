@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-05-15",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "New! Brazil and Thailand edge locations",
+    "url": "https://blog.short.io/new-brazil-and-thailand-edge-locations/",
+    "source": "rss"
+  },
+  {
     "date": "2026-05-14",
     "competitor": "dub",
     "competitor_name": "Dub",
@@ -990,6 +999,15 @@
     "source": "html"
   },
   {
+    "date": "2026-05-14",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "New! Improved fake bot detection",
+    "url": "https://blog.short.io/new-improved-fake-bot-detection/",
+    "source": "rss"
+  },
+  {
     "date": "2026-04-21",
     "competitor": "shortio",
     "competitor_name": "Short.io",
@@ -1260,6 +1278,51 @@
     "source": "rss"
   },
   {
+    "date": "2025-11-03",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "New! Bulk editing",
+    "url": "https://blog.short.io/new-bulk-editing/",
+    "source": "rss"
+  },
+  {
+    "date": "2025-10-31",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "New! Columns customization",
+    "url": "https://blog.short.io/new-columns-customization/",
+    "source": "rss"
+  },
+  {
+    "date": "2025-10-21",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "Post-mortem on Oct 20th AWS incident",
+    "url": "https://blog.short.io/post-mortem-on-oct-20th-aws-incident/",
+    "source": "rss"
+  },
+  {
+    "date": "2025-10-13",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "Introducing Shortio.cn, our new short link platform for Mainland China",
+    "url": "https://blog.short.io/introducing-shortio-cn-our-new-short-link-platform-for-mainland-china/",
+    "source": "rss"
+  },
+  {
+    "date": "2025-10-06",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "New! PayPal support",
+    "url": "https://blog.short.io/new-paypal-support/",
+    "source": "rss"
+  },
+  {
     "date": "2025-09-11",
     "competitor": "dub",
     "competitor_name": "Dub",
@@ -1278,6 +1341,15 @@
     "source": "sitemap"
   },
   {
+    "date": "2025-08-22",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "AI slug generation: the next step in ensuring privacy",
+    "url": "https://blog.short.io/ai-slug-generation-the-next-step-in-ensuring-privacy/",
+    "source": "rss"
+  },
+  {
     "date": "2025-08-12",
     "competitor": "dub",
     "competitor_name": "Dub",
@@ -1285,6 +1357,15 @@
     "title": "Introducing Dub Partners",
     "url": "https://dub.co/blog/introducing-dub-partners",
     "source": "sitemap"
+  },
+  {
+    "date": "2025-07-29",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "Wrapping up: Q2 2025",
+    "url": "https://blog.short.io/wrapping-up-q2-2025/",
+    "source": "rss"
   },
   {
     "date": "2025-07-25",
@@ -1296,6 +1377,33 @@
     "source": "sitemap"
   },
   {
+    "date": "2025-07-24",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "New! Browser, iOS, Android SDKs",
+    "url": "https://blog.short.io/new-browser-ios-android-sdks/",
+    "source": "rss"
+  },
+  {
+    "date": "2025-07-22",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "New!  Short.io now loads 2x faster",
+    "url": "https://blog.short.io/new-short-io-is-now-2x-faster/",
+    "source": "rss"
+  },
+  {
+    "date": "2025-07-17",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "New! MCP support",
+    "url": "https://blog.short.io/new-mcp-support/",
+    "source": "rss"
+  },
+  {
     "date": "2025-07-01",
     "competitor": "bitly",
     "competitor_name": "Bitly",
@@ -1305,6 +1413,15 @@
     "source": "sitemap"
   },
   {
+    "date": "2025-07-01",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "New! Robots.txt granular permissions",
+    "url": "https://blog.short.io/new-robots-txt-granular-permissions/",
+    "source": "rss"
+  },
+  {
     "date": "2025-06-27",
     "competitor": "bitly",
     "competitor_name": "Bitly",
@@ -1312,6 +1429,15 @@
     "title": "Bitly For Improving Brand Experiences In Financial Services",
     "url": "https://bitly.com/blog/bitly-for-improving-brand-experiences-in-financial-services/",
     "source": "sitemap"
+  },
+  {
+    "date": "2025-06-26",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "New! Improved Teams UI",
+    "url": "https://blog.short.io/new-improved-teams-ui/",
+    "source": "rss"
   },
   {
     "date": "2025-06-25",
@@ -1485,6 +1611,15 @@
     "source": "sitemap"
   },
   {
+    "date": "2025-06-12",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "Firebase is deprecating dynamic links: what’s next?",
+    "url": "https://blog.short.io/firebase-is-deprecating-dynamic-links-whats-next/",
+    "source": "rss"
+  },
+  {
     "date": "2025-06-11",
     "competitor": "dub",
     "competitor_name": "Dub",
@@ -1620,6 +1755,15 @@
     "source": "sitemap"
   },
   {
+    "date": "2025-06-03",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "Why we haven’t increased our prices in over a decade",
+    "url": "https://blog.short.io/why-we-havent-increased-our-prices-in-over-a-decade/",
+    "source": "rss"
+  },
+  {
     "date": "2025-05-30",
     "competitor": "bitly",
     "competitor_name": "Bitly",
@@ -1726,6 +1870,15 @@
     "title": "Short Url Click Tracking Analytics",
     "url": "https://bitly.com/blog/short-url-click-tracking-analytics/",
     "source": "sitemap"
+  },
+  {
+    "date": "2025-05-29",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "Short.io is Zapier’s best free URL shortener for 2025",
+    "url": "https://blog.short.io/short-io-is-zapiers-best-free-url-shortener-for-2025/",
+    "source": "rss"
   },
   {
     "date": "2025-05-28",
@@ -1863,6 +2016,15 @@
     "source": "sitemap"
   },
   {
+    "date": "2025-05-20",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "New! End-to-end encryption",
+    "url": "https://blog.short.io/new-end-to-end-encryption/",
+    "source": "rss"
+  },
+  {
     "date": "2025-05-15",
     "competitor": "bitly",
     "competitor_name": "Bitly",
@@ -1969,6 +2131,15 @@
     "title": "Consumer Packaged Goods",
     "url": "https://bitly.com/blog/consumer-packaged-goods/",
     "source": "sitemap"
+  },
+  {
+    "date": "2025-05-14",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "New! Conversion tracking",
+    "url": "https://blog.short.io/new-conversion-tracking/",
+    "source": "rss"
   },
   {
     "date": "2025-05-13",
@@ -2383,6 +2554,15 @@
     "title": "Qr Codes For Restaurants",
     "url": "https://bitly.com/blog/qr-codes-for-restaurants/",
     "source": "sitemap"
+  },
+  {
+    "date": "2025-04-22",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "Why we use our own software – Rocketadmin!",
+    "url": "https://blog.short.io/why-we-use-our-own-software-rocketadmin/",
+    "source": "rss"
   },
   {
     "date": "2025-04-17",
@@ -3429,6 +3609,15 @@
     "source": "sitemap"
   },
   {
+    "date": "2025-02-26",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "How to Receive Notifications When Someone Clicks Your Website Link Or Scans Your QR Code",
+    "url": "https://blog.short.io/how-to-receive-notifications-when-someone-clicks-your-website-link-or-scans-your-qr-code/",
+    "source": "rss"
+  },
+  {
     "date": "2025-02-25",
     "competitor": "bitly",
     "competitor_name": "Bitly",
@@ -3870,6 +4059,15 @@
     "source": "sitemap"
   },
   {
+    "date": "2025-02-13",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "No Intermediary Pages, No Ads, No Data Sales — Short.io’s Promise to You",
+    "url": "https://blog.short.io/no-intermediary-pages-no-ads-no-data-sales-short-ios-promise-to-you-2/",
+    "source": "rss"
+  },
+  {
     "date": "2025-02-07",
     "competitor": "bitly",
     "competitor_name": "Bitly",
@@ -4299,204 +4497,6 @@
     "type": "blog",
     "title": "Navigating The Ecommerce Customer Journey",
     "url": "https://bitly.com/blog/navigating-the-ecommerce-customer-journey/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-22",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "How Home Improvement Stores Can Use Qr Codes",
-    "url": "https://bitly.com/blog/how-home-improvement-stores-can-use-qr-codes/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-22",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Qr Codes For Hotel Check In And Check Out",
-    "url": "https://bitly.com/blog/qr-codes-for-hotel-check-in-and-check-out/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-22",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Qr Codes For Fan Experience",
-    "url": "https://bitly.com/blog/qr-codes-for-fan-experience/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-22",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "How To Use Short Links For Seamless Dining Experiences",
-    "url": "https://bitly.com/blog/how-to-use-short-links-for-seamless-dining-experiences/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-21",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Qr Codes For Teachers",
-    "url": "https://bitly.com/blog/qr-codes-for-teachers/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-21",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Short Links For Student Engagement",
-    "url": "https://bitly.com/blog/short-links-for-student-engagement/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-21",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "How To Convince Your Boss To Send You To A Conference",
-    "url": "https://bitly.com/blog/how-to-convince-your-boss-to-send-you-to-a-conference/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-21",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Qr Codes On Tv Commercials",
-    "url": "https://bitly.com/blog/qr-codes-on-tv-commercials/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-20",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Qr Codes On Meal Kits",
-    "url": "https://bitly.com/blog/qr-codes-on-meal-kits/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-20",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Integrated Marketing",
-    "url": "https://bitly.com/blog/integrated-marketing/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-20",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "How To Use Qr Codes In Automotive Retail",
-    "url": "https://bitly.com/blog/how-to-use-qr-codes-in-automotive-retail/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-20",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Brand Recognition",
-    "url": "https://bitly.com/blog/brand-recognition/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-17",
-    "competitor": "dub",
-    "competitor_name": "Dub",
-    "type": "blog",
-    "title": "Launch Week Recap",
-    "url": "https://dub.co/blog/launch-week-recap",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-16",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "B2B Customer Journey Touchpoints",
-    "url": "https://bitly.com/blog/b2b-customer-journey-touchpoints/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-16",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Clickfunnels Alternatives",
-    "url": "https://bitly.com/blog/clickfunnels-alternatives/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-16",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Qr Code Coupons",
-    "url": "https://bitly.com/blog/qr-code-coupons/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-16",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "How Car Washes Can Use Qr Codes",
-    "url": "https://bitly.com/blog/how-car-washes-can-use-qr-codes/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-16",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Brand Engagement",
-    "url": "https://bitly.com/blog/brand-engagement/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-16",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "How To Use Qr Codes In Salons And Spas",
-    "url": "https://bitly.com/blog/how-to-use-qr-codes-in-salons-and-spas/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-16",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Societal Marketing",
-    "url": "https://bitly.com/blog/societal-marketing/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-16",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Print Marketing",
-    "url": "https://bitly.com/blog/print-marketing/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-16",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Direct Response Marketing",
-    "url": "https://bitly.com/blog/direct-response-marketing/",
     "source": "sitemap"
   }
 ]
