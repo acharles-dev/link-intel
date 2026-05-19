@@ -1143,6 +1143,15 @@
     "source": "sitemap"
   },
   {
+    "date": "2026-03-18",
+    "competitor": "dub",
+    "competitor_name": "Dub",
+    "type": "blog",
+    "title": "Introducing Partner Referrals",
+    "url": "https://dub.co/blog/introducing-partner-referrals",
+    "source": "sitemap"
+  },
+  {
     "date": "2026-03-03",
     "competitor": "dub",
     "competitor_name": "Dub",
@@ -4488,15 +4497,6 @@
     "type": "blog",
     "title": "Sms Marketing For Cpg Brands",
     "url": "https://bitly.com/blog/sms-marketing-for-cpg-brands/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-24",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Navigating The Ecommerce Customer Journey",
-    "url": "https://bitly.com/blog/navigating-the-ecommerce-customer-journey/",
     "source": "sitemap"
   }
 ]
