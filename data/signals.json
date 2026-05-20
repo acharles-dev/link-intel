@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-05-19",
+    "competitor": "dub",
+    "competitor_name": "Dub",
+    "type": "blog",
+    "title": "Introducing Partner Tags",
+    "url": "https://dub.co/blog/introducing-partner-tags",
+    "source": "sitemap"
+  },
+  {
     "date": "2026-05-15",
     "competitor": "shortio",
     "competitor_name": "Short.io",
@@ -4488,15 +4497,6 @@
     "type": "blog",
     "title": "How To Use Bitly Pages And Qr Codes Together",
     "url": "https://bitly.com/blog/how-to-use-bitly-pages-and-qr-codes-together/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-24",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Sms Marketing For Cpg Brands",
-    "url": "https://bitly.com/blog/sms-marketing-for-cpg-brands/",
     "source": "sitemap"
   }
 ]
