@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-05-20",
+    "competitor": "dub",
+    "competitor_name": "Dub",
+    "type": "blog",
+    "title": "Introducing Commission Analytics",
+    "url": "https://dub.co/blog/introducing-commission-analytics",
+    "source": "sitemap"
+  },
+  {
     "date": "2026-05-19",
     "competitor": "dub",
     "competitor_name": "Dub",
@@ -4488,15 +4497,6 @@
     "type": "blog",
     "title": "How To Improve Customer Touchpoints",
     "url": "https://bitly.com/blog/how-to-improve-customer-touchpoints/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-24",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "How To Use Bitly Pages And Qr Codes Together",
-    "url": "https://bitly.com/blog/how-to-use-bitly-pages-and-qr-codes-together/",
     "source": "sitemap"
   }
 ]
