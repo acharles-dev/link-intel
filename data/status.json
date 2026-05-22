@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-21T14:49:58Z",
+  "last_updated": "2026-05-22T14:15:34Z",
   "sources": {
     "shortio_rss": {
       "status": "ok",
@@ -15,7 +15,7 @@
     },
     "dub_sitemap": {
       "status": "ok",
-      "items": 57
+      "items": 58
     },
     "bitly_sitemap": {
       "status": "ok",
@@ -26,8 +26,8 @@
       "items": 105
     },
     "bitly_jobs": {
-      "status": "ok",
-      "items": 1
+      "status": "empty",
+      "items": 0
     }
   }
 }

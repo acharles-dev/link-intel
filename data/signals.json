@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-05-21",
+    "competitor": "dub",
+    "competitor_name": "Dub",
+    "type": "blog",
+    "title": "Dub Mcp Server",
+    "url": "https://dub.co/blog/dub-mcp-server",
+    "source": "sitemap"
+  },
+  {
     "date": "2026-05-20",
     "competitor": "dub",
     "competitor_name": "Dub",
@@ -4488,15 +4497,6 @@
     "type": "blog",
     "title": "Ultimate Guide To Mobile Marketing Strategy",
     "url": "https://bitly.com/blog/ultimate-guide-to-mobile-marketing-strategy/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-24",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "How To Improve Customer Touchpoints",
-    "url": "https://bitly.com/blog/how-to-improve-customer-touchpoints/",
     "source": "sitemap"
   }
 ]
