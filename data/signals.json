@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-05-22",
+    "competitor": "dub",
+    "competitor_name": "Dub",
+    "type": "blog",
+    "title": "Network Referral Bonus",
+    "url": "https://dub.co/blog/network-referral-bonus",
+    "source": "sitemap"
+  },
+  {
     "date": "2026-05-21",
     "competitor": "dub",
     "competitor_name": "Dub",
@@ -25,6 +34,15 @@
     "title": "Introducing Partner Tags",
     "url": "https://dub.co/blog/introducing-partner-tags",
     "source": "sitemap"
+  },
+  {
+    "date": "2026-05-19",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "Announcing Organizations — a more mature way to structure and manage your company",
+    "url": "https://blog.short.io/announcing-organizations/",
+    "source": "rss"
   },
   {
     "date": "2026-05-15",
@@ -4479,24 +4497,6 @@
     "type": "blog",
     "title": "10 Free Tools For Small Business Marketing",
     "url": "https://bitly.com/blog/10-free-tools-for-small-business-marketing/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-24",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "How To Build An Online Presence",
-    "url": "https://bitly.com/blog/how-to-build-an-online-presence/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-24",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Ultimate Guide To Mobile Marketing Strategy",
-    "url": "https://bitly.com/blog/ultimate-guide-to-mobile-marketing-strategy/",
     "source": "sitemap"
   }
 ]
