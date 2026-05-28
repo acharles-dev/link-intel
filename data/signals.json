@@ -1233,6 +1233,15 @@
     "source": "rss"
   },
   {
+    "date": "2026-01-15",
+    "competitor": "dub",
+    "competitor_name": "Dub",
+    "type": "blog",
+    "title": "Bitly Vs Tinyurl",
+    "url": "https://dub.co/blog/bitly-vs-tinyurl",
+    "source": "sitemap"
+  },
+  {
     "date": "2026-01-13",
     "competitor": "shortio",
     "competitor_name": "Short.io",
@@ -4488,15 +4497,6 @@
     "type": "blog",
     "title": "Qsr Loyalty Programs",
     "url": "https://bitly.com/blog/qsr-loyalty-programs/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-24",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "10 Free Tools For Small Business Marketing",
-    "url": "https://bitly.com/blog/10-free-tools-for-small-business-marketing/",
     "source": "sitemap"
   }
 ]
