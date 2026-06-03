@@ -1323,6 +1323,15 @@
     "source": "rss"
   },
   {
+    "date": "2026-01-25",
+    "competitor": "dub",
+    "competitor_name": "Dub",
+    "type": "blog",
+    "title": "Bitly Vs Rebrandly",
+    "url": "https://dub.co/blog/bitly-vs-rebrandly",
+    "source": "sitemap"
+  },
+  {
     "date": "2026-01-15",
     "competitor": "dub",
     "competitor_name": "Dub",
@@ -4488,15 +4497,6 @@
     "type": "blog",
     "title": "How To Get Started With Bitly",
     "url": "https://bitly.com/blog/how-to-get-started-with-bitly/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-27",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Qsr Location Based Engagement",
-    "url": "https://bitly.com/blog/qsr-location-based-engagement/",
     "source": "sitemap"
   }
 ]
