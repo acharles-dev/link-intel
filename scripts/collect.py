@@ -169,8 +169,32 @@ def fetch_sitemap(url: str, competitor: str, path_prefix: str) -> list[dict]:
     return signals
 
 
-def fetch_rebrandly_blog() -> list[dict]:
-    """Scrape the Rebrandly blog page for post links."""
+def extract_post_date(html: str) -> str:
+    """Pull a post's real publish date (YYYY-MM-DD) from its page HTML.
+
+    Rebrandly is a Webflow site with no dated feed or sitemap, so the only
+    source of the real date is the article page itself. Prefer the explicit
+    publish date, then the OpenGraph article time, then last-modified.
+    Returns None if none is present.
+    """
+    for pattern in (
+        r'"datePublished"\s*:\s*"(\d{4}-\d{2}-\d{2})',
+        r'property="article:published_time"\s+content="(\d{4}-\d{2}-\d{2})',
+        r'"dateModified"\s*:\s*"(\d{4}-\d{2}-\d{2})',
+    ):
+        m = re.search(pattern, html)
+        if m:
+            return m.group(1)
+    return None
+
+
+def fetch_rebrandly_blog(known_urls: set = None) -> list[dict]:
+    """Scrape the Rebrandly blog page for post links and their real dates.
+
+    For posts already recorded (in *known_urls*) we skip the per-post page
+    fetch — their date is already stored — so daily runs only pay for new posts.
+    """
+    known_urls = known_urls or set()
     signals = []
     try:
         html = fetch_text("https://www.rebrandly.com/blog")
@@ -184,7 +208,13 @@ def fetch_rebrandly_blog() -> list[dict]:
             seen.add(url)
             slug = href.rstrip("/").split("/")[-1]
             title = slug.replace("-", " ").title()
-            signals.append(make_signal("rebrandly", title, url, "html"))
+            date = None
+            if url not in known_urls:
+                try:
+                    date = extract_post_date(fetch_text(url))
+                except Exception as e:
+                    print(f"  [WARN] Rebrandly date {url}: {e}", file=sys.stderr)
+            signals.append(make_signal("rebrandly", title, url, "html", date))
     except Exception as e:
         print(f"  [ERROR] Rebrandly blog scrape: {e}", file=sys.stderr)
     return signals
@@ -226,8 +256,9 @@ def fetch_greenhouse_jobs(board_name: str, competitor: str) -> list[dict]:
 # ---------------------------------------------------------------------------
 
 
-def collect_signals() -> tuple[list[dict], dict]:
+def collect_signals(known_urls: set = None) -> tuple[list[dict], dict]:
     """Collect signals from all sources. Returns (new_signals, source_status)."""
+    known_urls = known_urls or set()
     all_signals = []
     status = {}
 
@@ -262,7 +293,7 @@ def collect_signals() -> tuple[list[dict], dict]:
 
     # HTML scraping
     print("Fetching rebrandly_html...")
-    items = fetch_rebrandly_blog()
+    items = fetch_rebrandly_blog(known_urls)
     all_signals.extend(items)
     status["rebrandly_html"] = {"status": "ok", "items": len(items)}
     if not items:
@@ -339,8 +370,9 @@ def main():
     signals = load_json(SIGNALS_PATH, [])
     jobs = load_json(JOBS_PATH, [])
 
-    # Collect
-    new_signals, signal_status = collect_signals()
+    # Collect (pass known URLs so the per-post date fetch only runs for new posts)
+    known_urls = {s["url"] for s in signals}
+    new_signals, signal_status = collect_signals(known_urls)
     print()
     current_jobs, job_status = collect_jobs()
     print()
