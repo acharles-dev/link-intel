@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-06-25",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "Meet s.gy — Your new default free domain",
+    "url": "https://blog.short.io/meet-sgy/",
+    "source": "rss"
+  },
+  {
     "date": "2026-06-02",
     "competitor": "tinyurl",
     "competitor_name": "TinyURL",
@@ -4488,15 +4497,6 @@
     "type": "blog",
     "title": "Access Hospitality Loyalty Perks With Qr Codes",
     "url": "https://bitly.com/blog/access-hospitality-loyalty-perks-with-qr-codes/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-28",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "How To Get Started With Bitly",
-    "url": "https://bitly.com/blog/how-to-get-started-with-bitly/",
     "source": "sitemap"
   }
 ]
