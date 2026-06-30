@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-06-30",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "New! Multi-way A/B testing (Split URL v2)",
+    "url": "https://blog.short.io/split-url-v2/",
+    "source": "rss"
+  },
+  {
     "date": "2026-06-25",
     "competitor": "shortio",
     "competitor_name": "Short.io",
@@ -4488,15 +4497,6 @@
     "type": "blog",
     "title": "Link Tracking Software",
     "url": "https://bitly.com/blog/link-tracking-software/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-28",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Access Hospitality Loyalty Perks With Qr Codes",
-    "url": "https://bitly.com/blog/access-hospitality-loyalty-perks-with-qr-codes/",
     "source": "sitemap"
   }
 ]
