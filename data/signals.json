@@ -18,6 +18,15 @@
     "source": "rss"
   },
   {
+    "date": "2026-06-25",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "New! Dedicated IP for Enterprise",
+    "url": "https://blog.short.io/dedicated-ip-enterprise/",
+    "source": "rss"
+  },
+  {
     "date": "2026-06-02",
     "competitor": "tinyurl",
     "competitor_name": "TinyURL",
@@ -4488,15 +4497,6 @@
     "type": "blog",
     "title": "Digital Marketing Tools",
     "url": "https://bitly.com/blog/digital-marketing-tools/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-28",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Link Tracking Software",
-    "url": "https://bitly.com/blog/link-tracking-software/",
     "source": "sitemap"
   }
 ]
