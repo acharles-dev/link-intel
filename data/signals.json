@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-07-05",
+    "competitor": "rebrandly",
+    "competitor_name": "Rebrandly",
+    "type": "blog",
+    "title": "Beyond Click Counts",
+    "url": "https://www.rebrandly.com/blog/beyond-click-counts",
+    "source": "html"
+  },
+  {
     "date": "2026-06-30",
     "competitor": "shortio",
     "competitor_name": "Short.io",
@@ -4488,15 +4497,6 @@
     "type": "blog",
     "title": "Best Free Qr Code Generator",
     "url": "https://bitly.com/blog/best-free-qr-code-generator/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-28",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Digital Marketing Tools",
-    "url": "https://bitly.com/blog/digital-marketing-tools/",
     "source": "sitemap"
   }
 ]
