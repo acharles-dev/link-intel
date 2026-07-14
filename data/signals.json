@@ -9,6 +9,15 @@
     "source": "html"
   },
   {
+    "date": "2026-07-03",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "Fighting abuse, together",
+    "url": "https://blog.short.io/abuse-portal-announcement/",
+    "source": "rss"
+  },
+  {
     "date": "2026-06-30",
     "competitor": "shortio",
     "competitor_name": "Short.io",
@@ -4488,15 +4497,6 @@
     "type": "blog",
     "title": "How To Use Bitly For Digital Marketing",
     "url": "https://bitly.com/blog/how-to-use-bitly-for-digital-marketing/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-29",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Best Free Qr Code Generator",
-    "url": "https://bitly.com/blog/best-free-qr-code-generator/",
     "source": "sitemap"
   }
 ]
