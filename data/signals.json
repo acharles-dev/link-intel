@@ -1,5 +1,59 @@
 [
   {
+    "date": "2026-07-22",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "SSO lives in Organizations now — why that's better",
+    "url": "https://blog.short.io/sso-in-organizations/",
+    "source": "rss"
+  },
+  {
+    "date": "2026-07-03",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "Fighting abuse, together",
+    "url": "https://blog.short.io/abuse-portal-announcement/",
+    "source": "rss"
+  },
+  {
+    "date": "2026-07-03",
+    "competitor": "rebrandly",
+    "competitor_name": "Rebrandly",
+    "type": "blog",
+    "title": "Beyond Click Counts",
+    "url": "https://www.rebrandly.com/blog/beyond-click-counts",
+    "source": "html"
+  },
+  {
+    "date": "2026-06-30",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "New! Multi-way A/B testing (Split URL v2)",
+    "url": "https://blog.short.io/split-url-v2/",
+    "source": "rss"
+  },
+  {
+    "date": "2026-06-25",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "New! Dedicated IP for Enterprise",
+    "url": "https://blog.short.io/dedicated-ip-enterprise/",
+    "source": "rss"
+  },
+  {
+    "date": "2026-06-25",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "Meet s.gy — Your new default free domain",
+    "url": "https://blog.short.io/meet-sgy/",
+    "source": "rss"
+  },
+  {
     "date": "2026-06-02",
     "competitor": "tinyurl",
     "competitor_name": "TinyURL",
@@ -4401,102 +4455,48 @@
     "source": "sitemap"
   },
   {
-    "date": "2025-01-26",
-    "competitor": "rebrandly",
-    "competitor_name": "Rebrandly",
+    "date": "2025-01-27",
+    "competitor": "bitly",
+    "competitor_name": "Bitly",
     "type": "blog",
-    "title": "Tinyurl Api Review",
-    "url": "https://www.rebrandly.com/blog/tinyurl-api-review",
-    "source": "html"
+    "title": "Qsr Location Based Engagement",
+    "url": "https://bitly.com/blog/qsr-location-based-engagement/",
+    "source": "sitemap"
   },
   {
-    "date": "2025-01-15",
-    "competitor": "rebrandly",
-    "competitor_name": "Rebrandly",
+    "date": "2025-01-27",
+    "competitor": "bitly",
+    "competitor_name": "Bitly",
     "type": "blog",
-    "title": "Url Slug",
-    "url": "https://www.rebrandly.com/blog/url-slug",
-    "source": "html"
+    "title": "Landing Pages For Events",
+    "url": "https://bitly.com/blog/landing-pages-for-events/",
+    "source": "sitemap"
   },
   {
-    "date": "2025-01-15",
-    "competitor": "rebrandly",
-    "competitor_name": "Rebrandly",
+    "date": "2025-01-27",
+    "competitor": "bitly",
+    "competitor_name": "Bitly",
     "type": "blog",
-    "title": "Shorten Url",
-    "url": "https://www.rebrandly.com/blog/shorten-url",
-    "source": "html"
+    "title": "Smart Hotel Technology",
+    "url": "https://bitly.com/blog/smart-hotel-technology/",
+    "source": "sitemap"
   },
   {
-    "date": "2025-01-13",
-    "competitor": "rebrandly",
-    "competitor_name": "Rebrandly",
+    "date": "2025-01-27",
+    "competitor": "bitly",
+    "competitor_name": "Bitly",
     "type": "blog",
-    "title": "Supercharge Your Martech Stack",
-    "url": "https://www.rebrandly.com/blog/supercharge-your-martech-stack",
-    "source": "html"
+    "title": "How To Improve Guest Experience In Hotel",
+    "url": "https://bitly.com/blog/how-to-improve-guest-experience-in-hotel/",
+    "source": "sitemap"
   },
   {
-    "date": "2025-01-09",
-    "competitor": "rebrandly",
-    "competitor_name": "Rebrandly",
+    "date": "2025-01-27",
+    "competitor": "bitly",
+    "competitor_name": "Bitly",
     "type": "blog",
-    "title": "Using First Party Data As A Key Asset In 2025",
-    "url": "https://www.rebrandly.com/blog/using-first-party-data-as-a-key-asset-in-2025",
-    "source": "html"
-  },
-  {
-    "date": "2025-01-06",
-    "competitor": "rebrandly",
-    "competitor_name": "Rebrandly",
-    "type": "blog",
-    "title": "What Is Marketing Compliance",
-    "url": "https://www.rebrandly.com/blog/what-is-marketing-compliance",
-    "source": "html"
-  },
-  {
-    "date": "2025-01-03",
-    "competitor": "rebrandly",
-    "competitor_name": "Rebrandly",
-    "type": "blog",
-    "title": "Custom Link In Bio",
-    "url": "https://www.rebrandly.com/blog/custom-link-in-bio",
-    "source": "html"
-  },
-  {
-    "date": "2025-01-02",
-    "competitor": "rebrandly",
-    "competitor_name": "Rebrandly",
-    "type": "blog",
-    "title": "B2B Social Media Marketing",
-    "url": "https://www.rebrandly.com/blog/b2b-social-media-marketing",
-    "source": "html"
-  },
-  {
-    "date": "2024-12-16",
-    "competitor": "rebrandly",
-    "competitor_name": "Rebrandly",
-    "type": "blog",
-    "title": "Bulk Sms",
-    "url": "https://www.rebrandly.com/blog/bulk-sms",
-    "source": "html"
-  },
-  {
-    "date": "2024-12-11",
-    "competitor": "rebrandly",
-    "competitor_name": "Rebrandly",
-    "type": "blog",
-    "title": "Link Analytics",
-    "url": "https://www.rebrandly.com/blog/link-analytics",
-    "source": "html"
-  },
-  {
-    "date": "2024-12-10",
-    "competitor": "rebrandly",
-    "competitor_name": "Rebrandly",
-    "type": "blog",
-    "title": "Scaling Sms Campaigns",
-    "url": "https://www.rebrandly.com/blog/scaling-sms-campaigns",
-    "source": "html"
+    "title": "In Game Promotions With Qr Codes",
+    "url": "https://bitly.com/blog/in-game-promotions-with-qr-codes/",
+    "source": "sitemap"
   }
 ]
