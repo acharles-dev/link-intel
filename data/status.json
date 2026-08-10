@@ -1,29 +1,29 @@
 {
-  "last_updated": "2026-08-09T14:29:01Z",
+  "last_updated": "2026-08-10T14:15:10Z",
   "sources": {
     "shortio_rss": {
-      "status": "empty",
-      "items": 0
+      "status": "ok",
+      "items": 50
     },
     "tinyurl_rss": {
-      "status": "empty",
-      "items": 0
+      "status": "ok",
+      "items": 10
     },
     "sniply_rss": {
-      "status": "empty",
-      "items": 0
+      "status": "ok",
+      "items": 10
     },
     "dub_sitemap": {
-      "status": "empty",
-      "items": 0
+      "status": "ok",
+      "items": 59
     },
     "bitly_sitemap": {
-      "status": "empty",
-      "items": 0
+      "status": "ok",
+      "items": 766
     },
     "rebrandly_html": {
-      "status": "empty",
-      "items": 0
+      "status": "ok",
+      "items": 105
     },
     "bitly_jobs": {
       "status": "empty",
