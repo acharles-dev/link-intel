@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-08-14",
+    "competitor": "rebrandly",
+    "competitor_name": "Rebrandly",
+    "type": "blog",
+    "title": "Dynamic Vs Static Qr Codes For Analytics",
+    "url": "https://www.rebrandly.com/blog/dynamic-vs-static-qr-codes-for-analytics",
+    "source": "html"
+  },
+  {
     "date": "2026-07-22",
     "competitor": "shortio",
     "competitor_name": "Short.io",
@@ -4488,15 +4497,6 @@
     "type": "blog",
     "title": "How To Improve Guest Experience In Hotel",
     "url": "https://bitly.com/blog/how-to-improve-guest-experience-in-hotel/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-27",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "In Game Promotions With Qr Codes",
-    "url": "https://bitly.com/blog/in-game-promotions-with-qr-codes/",
     "source": "sitemap"
   }
 ]
