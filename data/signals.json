@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-08-16",
+    "competitor": "dub",
+    "competitor_name": "Dub",
+    "type": "blog",
+    "title": "Dub Vs Partnerstack",
+    "url": "https://dub.co/blog/dub-vs-partnerstack",
+    "source": "sitemap"
+  },
+  {
     "date": "2026-08-14",
     "competitor": "rebrandly",
     "competitor_name": "Rebrandly",
@@ -4488,15 +4497,6 @@
     "type": "blog",
     "title": "Smart Hotel Technology",
     "url": "https://bitly.com/blog/smart-hotel-technology/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-27",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "How To Improve Guest Experience In Hotel",
-    "url": "https://bitly.com/blog/how-to-improve-guest-experience-in-hotel/",
     "source": "sitemap"
   }
 ]
