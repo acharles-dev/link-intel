@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-08-27",
+    "competitor": "shortio",
+    "competitor_name": "Short.io",
+    "type": "blog",
+    "title": "New! Write and publish pages with Posts",
+    "url": "https://blog.short.io/posts-write-and-publish-pages/",
+    "source": "rss"
+  },
+  {
     "date": "2026-08-19",
     "competitor": "shortio",
     "competitor_name": "Short.io",
@@ -4488,15 +4497,6 @@
     "type": "blog",
     "title": "Steps For Building An Appointment Booking Landing Page",
     "url": "https://bitly.com/blog/steps-for-building-an-appointment-booking-landing-page/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-29",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Ways To Use Qr Codes In Retail",
-    "url": "https://bitly.com/blog/ways-to-use-qr-codes-in-retail/",
     "source": "sitemap"
   }
 ]
