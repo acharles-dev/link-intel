@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-08-31",
+    "competitor": "rebrandly",
+    "competitor_name": "Rebrandly",
+    "type": "blog",
+    "title": "7 Signs Your Team Has Outgrown Basic Link Analytics",
+    "url": "https://www.rebrandly.com/blog/7-signs-your-team-has-outgrown-basic-link-analytics",
+    "source": "html"
+  },
+  {
     "date": "2026-08-27",
     "competitor": "shortio",
     "competitor_name": "Short.io",
@@ -4488,15 +4497,6 @@
     "type": "blog",
     "title": "Connections Platform For A Pre Order Campaign",
     "url": "https://bitly.com/blog/connections-platform-for-a-pre-order-campaign/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-29",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Steps For Building An Appointment Booking Landing Page",
-    "url": "https://bitly.com/blog/steps-for-building-an-appointment-booking-landing-page/",
     "source": "sitemap"
   }
 ]
