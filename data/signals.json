@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-09-10",
+    "competitor": "rebrandly",
+    "competitor_name": "Rebrandly",
+    "type": "blog",
+    "title": "Url Slug",
+    "url": "https://www.rebrandly.com/blog/url-slug",
+    "source": "html"
+  },
+  {
     "date": "2026-08-31",
     "competitor": "rebrandly",
     "competitor_name": "Rebrandly",
@@ -4488,15 +4497,6 @@
     "type": "blog",
     "title": "Personalized Loyalty Programs With Qr Codes",
     "url": "https://bitly.com/blog/personalized-loyalty-programs-with-qr-codes/",
-    "source": "sitemap"
-  },
-  {
-    "date": "2025-01-29",
-    "competitor": "bitly",
-    "competitor_name": "Bitly",
-    "type": "blog",
-    "title": "Connections Platform For A Pre Order Campaign",
-    "url": "https://bitly.com/blog/connections-platform-for-a-pre-order-campaign/",
     "source": "sitemap"
   }
 ]
